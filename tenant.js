@@ -22,6 +22,7 @@ module.exports = function() {
     }
 
     this.tenant = tenant;
+    this.tenant.id = tenantId;
     yield* next;
   };
 };
