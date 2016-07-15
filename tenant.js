@@ -6,7 +6,7 @@ module.exports = function() {
 
   return function* (next) {
     const stateTenantId = this.state && this.state.auth && this.state.auth.tenantId ?
-      this.state.auth.tenantId : this.subdomains.join('-');
+      this.state.auth.tenantId : null;
 
     const tenantId = this.auth && this.auth.tenantId ?
       this.auth.tenantId : stateTenantId;
